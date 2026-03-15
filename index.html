@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Living Words</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #f5f3ee;
+    color: #1a1a18;
+    font-family: 'Source Serif 4', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Header ── */
+  header {
+    background: #ffffff;
+    border-bottom: 1px solid #e0ddd7;
+    padding: 2.5rem 1.5rem 2rem;
+    text-align: center;
+  }
+
+  header .site-name {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(2.2rem, 5vw, 3.2rem);
+    font-weight: 600;
+    letter-spacing: -.01em;
+    color: #1a1a18;
+    margin-bottom: .4rem;
+  }
+
+  header .site-tagline {
+    font-size: 1rem;
+    color: #888780;
+    font-style: italic;
+    margin-bottom: 1.5rem;
+  }
+
+  nav {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  nav a {
+    color: #5f5e5a;
+    text-decoration: none;
+    border-bottom: 1px solid transparent;
+    padding-bottom: 2px;
+    transition: color .15s, border-color .15s;
+  }
+
+  nav a:hover {
+    color: #1a1a18;
+    border-bottom-color: #1a1a18;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 3rem 1.5rem 5rem;
+  }
+
+  /* ── Hero ── */
+  .hero {
+    background: #ffffff;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    padding: 2.5rem 2.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .hero .label {
+    font-family: Georgia, serif;
+    font-size: 10.5px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: .85rem;
+  }
+
+  .hero h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
+    font-weight: 600;
+    line-height: 1.2;
+    margin-bottom: .85rem;
+    color: #1a1a18;
+  }
+
+  .hero p {
+    font-size: 1.05rem;
+    line-height: 1.8;
+    color: #555550;
+    margin-bottom: 1.5rem;
+    font-style: italic;
+    max-width: 600px;
+  }
+
+  .hero a.read-link {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1a1a18;
+    text-decoration: none;
+    border-bottom: 1px solid #1a1a18;
+    padding-bottom: 2px;
+  }
+
+  .hero a.read-link:hover {
+    color: #5f5e5a;
+    border-bottom-color: #5f5e5a;
+  }
+
+  /* ── Section heading ── */
+  .section-heading {
+    font-family: Georgia, serif;
+    font-size: .75rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: 1.25rem;
+    padding-bottom: .6rem;
+    border-bottom: 1px solid #e0ddd7;
+  }
+
+  /* ── Article grid ── */
+  .article-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 1px;
+    background: #e0ddd7;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    overflow: hidden;
+    margin-bottom: 3rem;
+  }
+
+  .article-card {
+    background: #ffffff;
+    padding: 1.5rem 1.35rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    transition: background .15s;
+  }
+
+  .article-card:hover {
+    background: #faf9f7;
+  }
+
+  .article-card .card-label {
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: .6rem;
+  }
+
+  .article-card h3 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.15rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: .55rem;
+    color: #1a1a18;
+  }
+
+  .article-card p {
+    font-size: .9rem;
+    line-height: 1.65;
+    color: #888780;
+    font-style: italic;
+  }
+
+  /* ── About strip ── */
+  .about-strip {
+    background: #ffffff;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    padding: 1.75rem 2rem;
+    display: flex;
+    gap: 1.5rem;
+    align-items: flex-start;
+  }
+
+  .about-strip .icon {
+    font-size: 1.6rem;
+    flex-shrink: 0;
+    margin-top: .1rem;
+  }
+
+  .about-strip p {
+    font-size: .95rem;
+    line-height: 1.8;
+    color: #5f5e5a;
+  }
+
+  .about-strip p strong {
+    font-weight: 500;
+    color: #1a1a18;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid #e0ddd7;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    color: #b4b2a9;
+    letter-spacing: .04em;
+  }
+
+  @media (max-width: 500px) {
+    .hero { padding: 1.75rem 1.35rem; }
+    .about-strip { flex-direction: column; gap: .75rem; }
+  }
+</style>
+</head>
+<body>
+
+<header>
+  <p class="site-name">Living Words</p>
+  <p class="site-tagline">Scripture, culture, and the examined life</p>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/posts/">Articles</a>
+    <a href="#about">About</a>
+  </nav>
+</header>
+
+<div class="container">
+
+  <!-- Featured Article -->
+  <div class="hero">
+    <p class="label">Featured Article &mdash; Faith &amp; Culture</p>
+    <h2>The Bible vs. the Therapeutic Self</h2>
+    <p>Modern therapeutic culture and pop psychology have quietly replaced a biblical anthropology with one built around the sovereign, wounded self. The differences are not cosmetic. They run to the root of what it means to be human.</p>
+    <a class="read-link" href="/posts/jesus-vs-therapeutic-culture.html">Read the article &rarr;</a>
+  </div>
+
+  <!-- All Articles -->
+  <p class="section-heading">All Articles</p>
+
+  <div class="article-grid">
+
+    <a class="article-card" href="/posts/jesus-vs-therapeutic-culture.html">
+      <p class="card-label">Faith &amp; Culture</p>
+      <h3>The Bible vs. the Therapeutic Self</h3>
+      <p>What happens when psychology replaces Scripture as the primary lens for understanding human beings.</p>
+    </a>
+
+    <!-- Add new article cards here following the same pattern:
+
+    <a class="article-card" href="/posts/your-article-filename.html">
+      <p class="card-label">Category</p>
+      <h3>Article Title</h3>
+      <p>Brief description of the article.</p>
+    </a>
+
+    -->
+
+  </div>
+
+  <!-- About -->
+  <div class="about-strip" id="about">
+    <div class="icon">&#9997;</div>
+    <p><strong>Living Words</strong> is a collection of articles on Scripture, theology, and the challenges facing the church in modern culture. Written from a Christ-centered, plain-spoken perspective — for those who want to think carefully about what the Bible actually says and what that demands of us today. <em>"Prayerfully read, listen and search the scriptures to see whether these things are so."</em></p>
+  </div>
+
+</div>
+
+<footer>
+  &copy; <script>document.write(new Date().getFullYear())</script> Living Words
+</footer>
+
+</body>
+</html>
