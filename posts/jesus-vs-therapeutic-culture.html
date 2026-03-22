@@ -181,20 +181,23 @@
   }
 
   .print-btn {
-    display: inline-block;
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
     margin-bottom: 2rem;
-    padding: .5rem 1.15rem;
+    padding: .6rem 1.25rem;
     font-family: Georgia, serif;
-    font-size: .82rem;
-    letter-spacing: .06em;
-    color: #555550;
-    background: #faf9f7;
-    border: 1px solid #d3d1c7;
+    font-size: .88rem;
+    letter-spacing: .04em;
+    color: #1a1a18;
+    background: #f0eee8;
+    border: 1px solid #c8c5bc;
     border-radius: 4px;
     cursor: pointer;
-    transition: background .15s, color .15s;
+    transition: background .15s, border-color .15s;
   }
-  .print-btn:hover { background: #f0eee8; color: #1a1a18; }
+  .print-btn::before { content: "\1F5B6"; font-size: 1rem; }
+  .print-btn:hover { background: #e4e1d9; border-color: #aaa89f; }
 
   @media print {
     body { background: #fff; }

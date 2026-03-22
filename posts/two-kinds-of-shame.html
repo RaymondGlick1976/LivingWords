@@ -159,20 +159,23 @@
 
     /* ── Print button ── */
     .print-btn {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
       margin-bottom: 2rem;
-      padding: .5rem 1.15rem;
+      padding: .6rem 1.25rem;
       font-family: Georgia, serif;
-      font-size: .82rem;
-      letter-spacing: .06em;
-      color: #7a6a4f;
-      background: #f3ede2;
-      border: 1px solid #d9cdb8;
+      font-size: .88rem;
+      letter-spacing: .04em;
+      color: #4a3728;
+      background: #ebe3d5;
+      border: 1px solid #c4b89e;
       border-radius: 4px;
       cursor: pointer;
-      transition: background .15s, color .15s;
+      transition: background .15s, border-color .15s;
     }
-    .print-btn:hover { background: #e8dfd0; color: #4a3728; }
+    .print-btn::before { content: "\1F5B6"; font-size: 1rem; }
+    .print-btn:hover { background: #dfd5c3; border-color: #a89a7e; }
 
     /* ── Responsive ── */
     @media (max-width: 600px) {
