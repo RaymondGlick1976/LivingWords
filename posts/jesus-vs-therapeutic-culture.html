@@ -188,15 +188,36 @@
     .contrast-col.therapy { border-top: 1px solid #e0ddd7; }
   }
 
+  .print-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: .45rem;
+    margin-bottom: 2rem;
+    padding: .6rem 1.25rem;
+    font-family: Georgia, serif;
+    font-size: .88rem;
+    letter-spacing: .04em;
+    color: #1a1a18;
+    background: #f0eee8;
+    border: 1px solid #c8c5bc;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background .15s, border-color .15s;
+  }
+  .print-btn::before { content: "\1F5B6"; font-size: 1rem; }
+  .print-btn:hover { background: #e4e1d9; border-color: #aaa89f; }
+
   @media print {
     body { background: #fff; }
     .page { border: none; padding: 2rem; }
+    .print-btn { display: none; }
   }
 </style>
 </head>
 <body>
 <div class="page">
 
+  <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
   <p class="kicker">Faith &amp; Culture</p>
   <h1>The Bible vs. the Therapeutic Self</h1>
   <p class="deck">Modern therapeutic culture and pop psychology have quietly replaced a biblical anthropology with one built around the sovereign, wounded self. The differences are not cosmetic. They run to the root of what it means to be human.</p>

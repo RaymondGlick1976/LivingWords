@@ -165,17 +165,44 @@
       color: #4a3728;
     }
 
+    /* ── Print button ── */
+    .print-btn {
+      display: inline-flex;
+      align-items: center;
+      gap: .45rem;
+      margin-bottom: 2rem;
+      padding: .6rem 1.25rem;
+      font-family: Georgia, serif;
+      font-size: .88rem;
+      letter-spacing: .04em;
+      color: #4a3728;
+      background: #ebe3d5;
+      border: 1px solid #c4b89e;
+      border-radius: 4px;
+      cursor: pointer;
+      transition: background .15s, border-color .15s;
+    }
+    .print-btn::before { content: "\1F5B6"; font-size: 1rem; }
+    .print-btn:hover { background: #dfd5c3; border-color: #a89a7e; }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       h2 { font-size: 1.15rem; }
       .page { padding: 2rem 1.25rem 4rem; }
     }
+
+    @media print {
+      body { background: #fff; }
+      .page { padding: 2rem; }
+      .print-btn { display: none; }
+    }
   </style>
 </head>
 <body>
   <div class="page">
 
+    <button class="print-btn" onclick="window.print()">Print / Save as PDF</button>
     <header>
       <h1>Two Kinds of Shame: Holy Modesty vs. Toxic Shame</h1>
       <p class="subtitle">The wisdom of Sirach guides us through one of today's most pressing spiritual battles</p>
