@@ -149,6 +149,47 @@
       margin: 3rem auto 0;
     }
 
+    .site-header {
+      background: #ffffff;
+      border-bottom: 1px solid #d9cdb8;
+      padding: 2rem 1.5rem 1.5rem;
+      text-align: center;
+    }
+
+    .site-header .site-name {
+      font-family: Georgia, serif;
+      font-size: clamp(1.8rem, 4vw, 2.4rem);
+      font-weight: 700;
+      color: #1a1a1a;
+      text-decoration: none;
+      display: block;
+      margin-bottom: .4rem;
+    }
+
+    .site-header nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      font-family: Georgia, serif;
+      font-size: .78rem;
+      letter-spacing: .1em;
+      text-transform: uppercase;
+      margin-top: 1rem;
+    }
+
+    .site-header nav a {
+      color: #5a4a38;
+      text-decoration: none;
+      border-bottom: 1px solid transparent;
+      padding-bottom: 2px;
+      transition: color .15s, border-color .15s;
+    }
+
+    .site-header nav a:hover {
+      color: #1a1a1a;
+      border-bottom-color: #1a1a1a;
+    }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       h2 { font-size: 1.15rem; }
@@ -157,6 +198,16 @@
   </style>
 </head>
 <body>
+
+<div class="site-header">
+  <a class="site-name" href="/index.html">Living Words</a>
+  <nav>
+    <a href="/index.html">Home</a>
+    <a href="/index.html#articles">Articles</a>
+    <a href="/about.html">About</a>
+  </nav>
+</div>
+
   <div class="page">
 
     <header>
