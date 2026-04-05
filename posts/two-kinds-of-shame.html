@@ -190,6 +190,27 @@
       border-bottom-color: #1a1a1a;
     }
 
+    .share-bar {
+      text-align: center;
+      margin: 2.5rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid #d9cdb8;
+      border-bottom: 1px solid #d9cdb8;
+    }
+    .share-btn {
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      padding: 0.7rem 1.8rem;
+      background: #b5975a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+    .share-btn:hover { background: #9a7d45; }
+
     @media (max-width: 600px) {
       header h1 { font-size: 1.6rem; }
       h2 { font-size: 1.15rem; }
@@ -326,6 +347,25 @@
         <strong>Scripture References:</strong> 1 Chronicles 16:29; 1 Corinthians 11:10; 1 Peter 3:1–4; 1 Timothy 2:9; 2 Kings 20:17; Genesis 6; Psalm 29:2; Psalm 139:14; Proverbs 22:6; Sirach 4:21; Song of Solomon
       </div>
     </div>
+
+    <div class="share-bar">
+      <button class="share-btn" onclick="shareArticle()">&#8599; Share this article</button>
+    </div>
+    <script>
+    function shareArticle() {
+      var data = { title: document.title, url: window.location.href };
+      if (navigator.share) {
+        navigator.share(data);
+      } else {
+        navigator.clipboard.writeText(data.url).then(function() {
+          var btn = document.querySelector('.share-btn');
+          var orig = btn.textContent;
+          btn.textContent = 'Link copied!';
+          setTimeout(function() { btn.textContent = orig; }, 2000);
+        });
+      }
+    }
+    </script>
 
     <!-- Kit Subscribe Form -->
     <div class="subscribe-wrapper">

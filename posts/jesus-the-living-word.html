@@ -235,6 +235,28 @@
       margin-top: 1rem;
     }
 
+    /* ── Share Bar ── */
+    .share-bar {
+      text-align: center;
+      margin: 2.5rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid #d9cdb8;
+      border-bottom: 1px solid #d9cdb8;
+    }
+    .share-btn {
+      font-family: 'Source Serif 4', Georgia, serif;
+      font-size: 1rem;
+      padding: 0.7rem 1.8rem;
+      background: #b5975a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+    .share-btn:hover { background: #9a7d45; }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .site-header-inner { height: auto; padding: 1rem 0; flex-direction: column; gap: 0.75rem; }
@@ -391,6 +413,25 @@
       <p>2 Timothy 3:16 · 2 Corinthians 3:6 · Galatians 5:22–23 · Jeremiah 31:33</p>
       <p>1 John 4:1 · Matthew 7:20 · Psalm 119:105 · Deuteronomy 13</p>
     </div>
+
+    <div class="share-bar">
+      <button class="share-btn" onclick="shareArticle()">&#8599; Share this article</button>
+    </div>
+    <script>
+    function shareArticle() {
+      var data = { title: document.title, url: window.location.href };
+      if (navigator.share) {
+        navigator.share(data);
+      } else {
+        navigator.clipboard.writeText(data.url).then(function() {
+          var btn = document.querySelector('.share-btn');
+          var orig = btn.textContent;
+          btn.textContent = 'Link copied!';
+          setTimeout(function() { btn.textContent = orig; }, 2000);
+        });
+      }
+    }
+    </script>
 
     <!-- Subscribe Form -->
     <div class="subscribe-wrapper">
