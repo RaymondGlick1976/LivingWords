@@ -269,6 +269,27 @@
       letter-spacing: 0.04em;
     }
 
+    .share-bar {
+      text-align: center;
+      margin: 2.5rem 0;
+      padding: 1.5rem 0;
+      border-top: 1px solid #d9cdb8;
+      border-bottom: 1px solid #d9cdb8;
+    }
+    .share-btn {
+      font-family: Georgia, serif;
+      font-size: 1rem;
+      padding: 0.7rem 1.8rem;
+      background: #b5975a;
+      color: #fff;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      letter-spacing: 0.03em;
+      transition: background 0.2s;
+    }
+    .share-btn:hover { background: #9a7d45; }
+
     /* ── Responsive ── */
     @media (max-width: 600px) {
       .article-header h1 { font-size: 1.7rem; }
@@ -482,6 +503,25 @@
   <p>The church does not need less fear. It needs the right one. The fear that displaces all lesser fears. The fear that is inseparable from love — that grows as love grows, and makes love more whole. The fear that sent the midwives back to their work, that kept Joseph faithful in Potiphar's house, that carried the martyrs singing to their deaths.</p>
 
   <p>Not the fear that stops you. The fear that sends you.</p>
+
+  <div class="share-bar">
+    <button class="share-btn" onclick="shareArticle()">&#8599; Share this article</button>
+  </div>
+  <script>
+  function shareArticle() {
+    var data = { title: document.title, url: window.location.href };
+    if (navigator.share) {
+      navigator.share(data);
+    } else {
+      navigator.clipboard.writeText(data.url).then(function() {
+        var btn = document.querySelector('.share-btn');
+        var orig = btn.textContent;
+        btn.textContent = 'Link copied!';
+        setTimeout(function() { btn.textContent = orig; }, 2000);
+      });
+    }
+  }
+  </script>
 
   <!-- Subscribe Form -->
   <div class="subscribe-wrapper">
