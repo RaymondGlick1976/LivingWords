@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Church That Dares to Restore | Living Words</title>
-  <meta name="description" content="We react against harsh condemnation — rightly so. But in doing so, have we quietly abandoned the biblical call to restore? A reflection on Matthew 18 and what real love looks like in the body of Christ." />
+  <title>The Lost Art of Restoration, Part 2: The Courage to Hear | Living Words</title>
+  <meta name="description" content="Restoration requires more than someone willing to speak. It requires someone willing to listen. A reflection on Matthew 5, the examined heart, and what it really means to hear your brother." />
 
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8EBKS8RJN8"></script>
@@ -46,7 +46,7 @@
       -webkit-font-smoothing: antialiased;
     }
 
-    /* ─── HEADER / NAV ─────────────────────────────── */
+    /* ─── HEADER ───────────────────────────────────── */
     header {
       background-color: var(--brown);
       border-bottom: 3px solid var(--gold);
@@ -71,9 +71,7 @@
       letter-spacing: 0.02em;
     }
 
-    .site-title span {
-      color: var(--gold-light);
-    }
+    .site-title span { color: var(--gold-light); }
 
     nav ul {
       list-style: none;
@@ -93,7 +91,7 @@
 
     nav a:hover { color: var(--gold-light); }
 
-    /* ─── HERO / ARTICLE HEADER ─────────────────────── */
+    /* ─── ARTICLE HERO ─────────────────────────────── */
     .article-hero {
       background-color: var(--brown);
       border-bottom: 1px solid rgba(181,151,90,0.3);
@@ -118,17 +116,17 @@
       color: var(--cream);
       line-height: 1.2;
       max-width: 640px;
-      margin: 0 auto 20px;
+      margin: 0 auto 16px;
     }
 
     .article-hero .subtitle {
-      font-size: 1.05rem;
+      font-size: 1.1rem;
       font-style: italic;
-      color: #c0b09a;
-      font-weight: 300;
-      max-width: 520px;
+      color: var(--gold-light);
+      font-weight: 400;
+      max-width: 480px;
       margin: 0 auto 28px;
-      line-height: 1.55;
+      line-height: 1.45;
     }
 
     .article-meta {
@@ -146,9 +144,7 @@
       padding: 56px 24px 72px;
     }
 
-    .article-body p {
-      margin-bottom: 1.55em;
-    }
+    .article-body p { margin-bottom: 1.55em; }
 
     .article-body h2 {
       font-family: 'Source Serif 4', Georgia, serif;
@@ -197,34 +193,14 @@
       margin-top: 10px;
     }
 
-    .article-body .scripture {
-      display: block;
-      border-left: 4px solid var(--gold);
-      padding: 16px 24px;
-      margin: 1.8em 0;
-      font-style: italic;
-      color: var(--brown-mid);
-      font-size: 1.02rem;
-      line-height: 1.65;
-      background: transparent;
-    }
-
-    .article-body .scripture .ref {
-      display: block;
-      font-style: normal;
-      font-size: 0.82rem;
-      letter-spacing: 0.05em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-top: 8px;
-    }
-
     .article-body strong {
       font-weight: 600;
       color: var(--brown);
     }
 
-    /* drop cap on first paragraph */
+    .article-body em { font-style: italic; }
+
+    /* drop cap */
     .article-body > p:first-of-type::first-letter {
       float: left;
       font-size: 4rem;
@@ -236,13 +212,47 @@
       font-weight: 600;
     }
 
-    /* closing ornament */
     .article-close {
       text-align: center;
       margin-top: 3em;
       color: var(--gold);
       font-size: 1.5rem;
       letter-spacing: 0.2em;
+    }
+
+    /* ─── SERIES NAV ─────────────────────────────────── */
+    .series-nav {
+      margin-top: 2.5em;
+      padding: 24px 28px;
+      background: var(--cream-dark);
+      border-left: 4px solid var(--gold);
+      border-radius: 0 3px 3px 0;
+    }
+
+    .series-nav .series-label {
+      font-size: 0.78rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 8px;
+    }
+
+    .series-nav p {
+      font-size: 1rem;
+      color: var(--brown);
+      line-height: 1.5;
+      margin-bottom: 12px !important;
+    }
+
+    .series-nav a {
+      font-family: Georgia, serif;
+      font-size: 0.82rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--brown);
+      text-decoration: none;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 2px;
     }
 
     /* ─── DIVIDER ────────────────────────────────────── */
@@ -252,7 +262,7 @@
       margin: 0;
     }
 
-    /* ─── SUBSCRIBE SECTION ──────────────────────────── */
+    /* ─── SUBSCRIBE ──────────────────────────────────── */
     .subscribe-section {
       background-color: var(--cream-dark);
       padding: 52px 24px;
@@ -277,12 +287,8 @@
       letter-spacing: 0.04em;
     }
 
-    footer a {
-      color: var(--gold);
-      text-decoration: none;
-    }
+    footer a { color: var(--gold); text-decoration: none; }
 
-    /* ─── RESPONSIVE ─────────────────────────────────── */
     @media (max-width: 600px) {
       .site-title { font-size: 1.05rem; }
       nav ul { gap: 18px; }
@@ -315,9 +321,9 @@
      ARTICLE HERO
 ════════════════════════════════════════ -->
 <div class="article-hero">
-  <span class="category">Church Life &amp; Discipline &nbsp;·&nbsp; Part 1 of 2</span>
+  <span class="category">Church Life &amp; Discipline &nbsp;·&nbsp; Part 2 of 2</span>
   <h1>The Lost Art of Restoration</h1>
-  <p class="subtitle">Part 1: The Courage to Correct</p>
+  <p class="subtitle">Part 2: The Courage to Hear</p>
   <p class="article-meta">April 2026</p>
 </div>
 
@@ -328,92 +334,88 @@
 <main class="article-wrap">
   <article class="article-body">
 
-    <p>There is a conversation happening across Christian circles about correction — about who has the right to speak to someone else's sin, how to do it, and whether it is even our place. And much of it is long overdue. The church has a painful history of getting this badly wrong. There are real stories of pride-driven harshness disguised as righteousness, of public shaming dressed up as accountability, of people being destroyed rather than restored. Those wounds are real. The grief over them is justified.</p>
+    <p>In Part 1 we talked about the church that has lost the courage to correct — the community that, in its well-meaning reaction against condemnation, has quietly abandoned the biblical call to restore. But there is another side to this loss that is just as serious and far less often named. It is not just that we have stopped going to our brothers. It is that when someone comes to us, we no longer know how to receive them.</p>
 
-    <p>But I want to name something carefully: in our very understandable reaction against those wounds, we are in danger of discarding something Jesus gave the church that is not optional. We are in danger of losing the church that dares to restore.</p>
+    <p>We have lost the art of hearing.</p>
 
-    <h2>What We Got Right — and What We Quietly Dropped</h2>
+    <p>And without it, restoration is impossible — because restoration is never a one-person work. It requires someone willing to speak the truth. But it also requires someone willing to sit still long enough to let the truth land.</p>
 
-    <p>The correction has gone something like this: condemnation is bad, conviction is the Holy Spirit's work, our job is to love people and let God do the rest. And there is something genuinely right in that. The distinction between conviction and condemnation is real and biblical. Paul makes clear that "there is therefore now no condemnation for those who are in Christ Jesus" (Romans 8:1). The idea that Christians are called to stand above others in judgment — positioning themselves as someone's prosecutor, shame-giver, or spiritual executioner — is not the way of Christ.</p>
-
-    <p>But somewhere in that correction, the argument shifted. What began as "correct sin gently, not harshly" became "leave the correcting to the Holy Spirit." What began as "don't shame people" became "don't confront people." What began as a needed rebuke of pride-driven condemnation has, in many places, produced a silence around sin that looks like humility but is something else entirely.</p>
-
-    <p>Because Jesus did not leave the question open.</p>
-
-    <h2>The Direction Jesus Gave Us</h2>
+    <h2>The More Demanding Command</h2>
 
     <blockquote>
-      <p>If your brother sins against you, go and tell him his fault, between you and him alone. If he listens to you, you have gained your brother. But if he does not listen, take one or two others along with you… If he refuses to listen to them, tell it to the church.</p>
-      <cite>Matthew 18:15–17</cite>
+      <p>So if you are offering your gift at the altar and there remember that your brother has something against you, leave your gift there before the altar and go. First be reconciled to your brother, and then come and offer your gift.</p>
+      <cite>Matthew 5:23–24</cite>
     </blockquote>
 
-    <p>Scholars debate the exact scope of this passage — whether it addresses only personal offenses or a broader range of sin, what it means to finally "treat him as a Gentile," how it sits alongside the parable of the lost sheep that precedes it. These are honest questions worth holding with care. But whatever the precise edges of interpretation, the direction is unmistakable: Jesus gave the church a process. It is structured, deliberate, and assigned to people — not left to the invisible work of the Spirit alone.</p>
+    <p>Most of us are familiar with Matthew 18 — the passage that calls us to go to a brother who has sinned. But Matthew 5 makes a harder and more personal demand. Here Jesus is not asking you to go to someone who has wronged you. He is asking you to go to someone who has something against <em>you.</em> You may be the one at fault. You may not even know exactly what you did. But the moment you become aware of a fracture — even mid-worship, even with your hands already lifted — Jesus says: stop. Leave your gift. Go and be reconciled first.</p>
 
-    <p>And notice what that process is aimed at: <em>you have gained your brother.</em> Not the satisfaction of being right. Not the enforcement of rules. Not the exposure of failure. A brother restored. The entire movement of the passage — private conversation, then witnesses, then the gathered community — is in service of that single goal. The community has a role precisely because the soul of the brother is worth whatever it takes to reach him.</p>
+    <p>This is not a small ask. Jesus interrupts the most sacred act of religious life — the offering — to make room for it. He is saying, in effect, that you cannot fully worship while a relationship lies broken and you have done nothing about it. The altar can wait. Your brother cannot.</p>
 
-    <p>This pattern is not unique to Matthew 18. Paul writes in Galatians 6:1: <em>"Brothers, if anyone is caught in any transgression, you who are spiritual should restore him in a spirit of gentleness."</em> James closes his letter by calling believers to turn one another back from error (James 5:19–20). The picture that emerges across the New Testament is consistent: the body of Christ bears responsibility for its members. The Spirit convicts — yes. But God designed much of that conviction to flow through the faithful, careful, costly words of people who love us enough to speak the truth.</p>
+    <p>This passage is rarely preached in conversations about restoration. But it reframes the whole discussion. Because Matthew 18 addresses what to do when your brother wrongs you. Matthew 5 addresses what to do when you may have wronged your brother. Together they describe a community in which no one waits to be approached. Everyone goes.</p>
 
-    <h2>Two Kinds of Correction</h2>
+    <h2>The Pride That Disguises Itself as Discernment</h2>
 
-    <p>This is where the real distinction lies — not between correction and silence, but between two very different kinds of correction.</p>
+    <p>There is a posture that has become common — and it sounds spiritual enough that most people do not question it. When correction comes, the response is: <em>"I don't receive that."</em> Or: <em>"I've prayed about this and I have peace."</em> Or more subtly — a long silence, a slow change of subject, a gracious smile that closes the door without appearing to.</p>
 
-    <p><strong>The first is flesh-driven.</strong> It announces sin publicly before going privately. It is animated by pride, the hunger to be seen as righteous. It shames rather than restores, humiliates rather than heals. It has no patience for process, no gentleness for the fallen, no vision beyond being right. It is condemnation dressed in church clothes — and it is exactly what drives people away from Jesus rather than toward Him.</p>
+    <p>These responses are not always wrong. There are times when correction is genuinely misdirected — when someone is speaking from their own wound rather than the Spirit, when what is being called sin is not sin, when the person speaking is not close enough to the situation to know what they are addressing. Discernment is real and necessary.</p>
 
-    <p><strong>The second is Spirit-led.</strong> It begins in prayer. It comes with a broken heart rather than a puffed chest. It follows the steps Christ laid out. It is willing to walk the slow road of restoration. It keeps the door open for repentance. This is Paul's description in Galatians 6:1: <em>"Brothers, if anyone is caught in any transgression, you who are spiritual should restore him in a spirit of gentleness. Keep watch on yourself, lest you too be tempted."</em></p>
+    <p>But there is a version of "I don't receive that" which is simply pride wearing the clothes of spiritual maturity. It has learned the language of peace and boundaries and inner healing well enough to make every hard word bounce off harmlessly. It cannot be corrected because it has already decided it does not need to be. It mistakes the discomfort of being seen for the discomfort of being wronged.</p>
 
-    <p>The difference between them is not whether sin is named. The difference is the spirit behind it, the process by which it unfolds, and the goal being pursued. One is condemnation. The other is restoration. Both speak. Only one looks like Jesus.</p>
+    <p>The difference between genuine discernment and defended pride is not always obvious from the outside. But it tends to be uncomfortably clear from the inside — if we are willing to look.</p>
 
-    <h2>The Ban as an Act of Covenant Love</h2>
+    <h2>What It Actually Means to Hear</h2>
 
-    <p>The early Anabaptists — those sixteenth-century believers who gave everything to recover the New Testament pattern of the church — took church discipline so seriously that they made it one of the marks of the true church. They called it the <em>Ban</em>.</p>
+    <p>The word Jesus uses in Matthew 18 for the successful outcome of correction is telling: <em>you have gained your brother.</em> Gained — as if something of real value was at stake, something that could have been lost. The correction worked not just because someone spoke truth carefully, but because someone heard it honestly.</p>
 
-    <p>The Schleitheim Confession, drafted in 1527, explained it plainly: the ban "shall be employed to admonish and warn in brotherly love, to restore the brother to obedience, and to preserve the body from corruption." Three goals — admonition, restoration, purity. None of these goals can be achieved by silence.</p>
+    <p>To hear your brother is not simply to let the words enter your ears. It is to let them enter your conscience. It is to ask — genuinely, unhurriedly — <em>Is there something true in what they are saying?</em> It is to resist the first instinct, which is almost always self-defense. It is to stay in the room rather than quietly retreating behind explanation.</p>
 
-    <p>This is not the ban as weapon. It is the ban as surgery — painful, carefully applied, aimed at life rather than death. Melvin Lehman has described church discipline as "proof that we care for the soul of our brother." A community that never confronts sin is not a community of love. It is a community of polite distance, where people are never close enough to one another to speak the truth.</p>
+    <p>The Anabaptist tradition placed enormous weight on what they called the examined life — the understanding that the community serves as a mirror for the soul. To be part of the body of Christ was to be accountable to it. Not in the sense of surveillance, but in the sense of shared sight: I cannot see my own blind spots as clearly as those who walk beside me can. The community is a gift for this reason. When a brother speaks to something in my life, he is offering me a view I could not get on my own.</p>
 
-    <p>Brotherhood — the kind of covenant community the early church embodied and the Anabaptists sought to recover — means being close enough to see each other's struggles, and loving each other enough to name them. Not with cruelty. Never with cruelty. But with honesty, with patience, and with the long vision of restoration always in view.</p>
+    <p>That gift requires a certain kind of humility to receive. Not the performed humility of someone who says "you're right, I'll pray about it" and never returns to the conversation. But the working humility of someone who takes the word seriously enough to actually examine themselves — to sit with the discomfort, to bring it before God, to ask whether the correction is true.</p>
 
-    <h2>Silence Is Not Always Mercy</h2>
+    <h2>Restoration as Personal Responsibility</h2>
 
-    <p>There is a false humility that has become fashionable — the idea that saying nothing is always the wiser, safer, more Christlike choice. That the quieter person is always the more spiritual one.</p>
+    <p>Here is what Matthew 5 makes unavoidable: restoration is not something that happens to you. It is something you pursue. You do not wait until someone comes to you with a process. You go — even before the worship service is over, even when you are not certain you did anything wrong, even when the conversation will be uncomfortable. You go because the relationship matters more than the offering, and because Jesus said so.</p>
 
-    <p>But Proverbs 27:6 says, <em>"Faithful are the wounds of a friend; profuse are the kisses of an enemy."</em> The friend who speaks a hard word — carefully, reluctantly, out of love — is doing more for your soul than the one who smiles and stays silent.</p>
+    <p>This is a significant reorientation. Much of how we talk about correction places all the responsibility on the person who speaks — on getting the tone right, the timing right, the process right. And those things do matter, as Part 1 made clear. But the receiver carries responsibility too. The responsibility to stay open. To examine themselves honestly. To respond to a hard word with something more than a gracious deflection.</p>
 
-    <p>When the prophet Nathan confronted David, he was not condemning him. He was restoring him. David's response was not outrage but repentance: "I have sinned against the LORD." That hard word opened the door to what we now call Psalm 51 — one of the most beautiful prayers of confession in all of Scripture. If Nathan had said, "That's between David and the Holy Spirit," we would have lost both the repentance and the psalm.</p>
+    <p>Proverbs 15:31–32 puts it plainly: <em>"The ear that listens to life-giving reproof will dwell among the wise. Whoever ignores instruction despises himself, but he who listens to reproof gains understanding."</em> The ability to receive correction is not weakness. Scripture calls it wisdom. The inability to receive it — the defended, teflon soul to whom nothing sticks — is treated not as spiritual maturity but as a kind of self-destruction.</p>
 
-    <p>Silence in the face of a brother's sin is not neutrality. It is abandonment.</p>
+    <h2>The Examined Heart</h2>
 
-    <h2>The Church That Dares</h2>
+    <p>David's response to Nathan in 2 Samuel 12 is one of the most striking moments in all of Scripture. When the prophet confronted him — through a story, indirectly, with no accusation named until the last moment — David did not deflect. He did not remind Nathan of his authority or question his motives. He said: <em>"I have sinned against the LORD."</em> Five words. Immediate. No qualification. No "but you have to understand the context." Just the naked acknowledgment.</p>
 
-    <p>What does it look like — a church that dares to restore?</p>
+    <p>What produced that response was not only the prophet's faithfulness. It was a heart that had not yet calcified. A heart that, for all its failures, was still capable of being reached. David's history was already complicated — he had sinned grievously. But something in him had kept the door open to truth. And when truth came, it found a way in.</p>
 
-    <p>It looks like a community where no one is left alone to drown in secret sin without someone who loves them enough to wade in. It looks like leaders who pray before they speak, who go privately before they go publicly, who follow Jesus' process not because the rules demand it but because the soul of their brother is worth it. It looks like a people close enough to one another that there is no comfortable distance in which sin can quietly take root.</p>
+    <p>That capacity — the open, examinable heart — is something that can be cultivated or lost. A person who consistently refuses correction, who always has an explanation, who is never at fault, who meets every hard word with a deflection — that person is not becoming more spiritually mature. They are becoming harder. Less reachable. Less able to be restored, which means less able to be free.</p>
 
-    <p>It is not a harsh church. But it is an honest one. It is not a condemning church. But it is a courageous one. It is not a church that appoints itself judge over another person's standing before God. But it is a church that takes seriously what Jesus said about gaining your brother.</p>
+    <p>Psalm 139 ends with one of the most courageous prayers in Scripture: <em>"Search me, O God, and know my heart. Try me and know my thoughts. And see if there be any grievous way in me, and lead me in the way everlasting."</em> This is the examined heart on full display — not defensive, not self-justifying, but genuinely open to being known and corrected by God. And God, more often than we realize, does that searching through the faithful words of people who love us.</p>
 
-    <p>The book of Acts describes a people who shared everything — bread, possessions, and lives. That kind of proximity produces exactly the accountability we have learned to fear. And it produces exactly the restoration that sin-weary people most desperately need.</p>
+    <h2>The Community That Dares to Hear</h2>
 
-    <h2>A Word for Both Sides</h2>
+    <p>The early church was a community of proximity. People knew each other — not just their names and preferences but their struggles, their patterns, their slow drifts. That proximity made both kinds of restoration possible: the correction that goes out and the hearing that receives it. You cannot meaningfully speak truth into someone's life from a distance. And you cannot genuinely hear someone who barely knows you.</p>
 
-    <p>For those who have wielded correction as a weapon — who have used accountability as cover for pride, for control, or for self-satisfaction — the rebuke stands. You are not the Holy Spirit. You have no right to condemn. The harshness you have called holiness has driven people from Jesus rather than toward Him, and you will answer for that. Ego dressed in church clothes is still ego.</p>
+    <p>We have traded proximity for comfort. The modern church is often a collection of individuals who worship in the same space but do not live inside each other's lives. In that environment, neither correction nor hearing is really possible — because neither requires anything of us. We attend. We leave. Nobody sees the whole.</p>
 
-    <p>But for those of us who are tempted to step back so far that we leave our brothers and sisters alone in their sin — the call stands also. The antidote to condemnation is not silence. The antidote to pride-driven correction is humble, structured, covenant-shaped restoration. Not less involvement in one another's lives, but <em>better</em> involvement. Slower, gentler, more prayerful — and more faithful.</p>
+    <p>To recover the lost art of restoration is to recover closeness. The willingness to be seen and to see. To speak and to listen. To go when you know your brother has something against you, even when the conversation is costly. To let a hard word sit in your conscience long enough to ask whether it is true.</p>
 
-    <p>Conviction draws people closer to God. We agree on that. But God designed much of that conviction to flow through the costly, faithful words of people who belong to one another. The Spirit works. He often works through us.</p>
+    <p>Part 1 of this series asked whether the church still has the courage to correct. Part 2 asks something equally searching: does the church still have the courage to hear?</p>
+
+    <p>Because a community where people will speak but no one will listen is not restoration. It is noise. And a community where people will listen but no one will speak is not love. It is polite abandonment.</p>
+
+    <p>The lost art of restoration requires both. The courage to correct, and the courage to hear. Both are hard. Both are costly. And both are exactly what Christ called us to.</p>
 
     <blockquote>
-      <p>Whoever turns a sinner from the error of their way will save them from death and cover over a multitude of sins.</p>
-      <cite>James 5:20</cite>
+      <p>Whoever gives heed to instruction prospers, and blessed is the one who trusts in the Lord.</p>
+      <cite>Proverbs 16:20</cite>
     </blockquote>
-
-    <p>To dare to restore is not arrogance. It is obedience. It is not playing God. It is obeying God. And the church that will not dare it has traded the narrow, costly, beautiful way of love for something far more comfortable — and far less than Christ.</p>
 
     <div class="article-close">✦</div>
 
-    <div style="margin-top: 2.5em; padding: 24px 28px; background: #f2ede4; border-left: 4px solid #b5975a; border-radius: 0 3px 3px 0;">
-      <p style="font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: #b5975a; margin-bottom: 8px;">Continue the Series</p>
-      <p style="font-size: 1rem; color: #3b2a1a; line-height: 1.5; margin-bottom: 12px;"><strong>Part 2: The Courage to Hear</strong> — Restoration requires more than someone willing to speak. It requires someone willing to listen. What does it mean to truly hear your brother?</p>
-      <a href="lost-art-of-restoration-part-2.html" style="font-family: Georgia, serif; font-size: 0.82rem; letter-spacing: 0.08em; text-transform: uppercase; color: #3b2a1a; text-decoration: none; border-bottom: 1px solid #b5975a; padding-bottom: 2px;">Read Part 2 &rarr;</a>
+    <div class="series-nav">
+      <p class="series-label">Read the Series</p>
+      <p><strong>Part 1: The Courage to Correct</strong> — The church has lost the courage to restore. Not because correction is too hard, but because we have confused condemnation with accountability.</p>
+      <a href="the-church-that-dares-to-restore.html">&larr; Read Part 1</a>
     </div>
 
   </article>
