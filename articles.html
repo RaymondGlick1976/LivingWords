@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-8EBKS8RJN8"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-8EBKS8RJN8');
+</script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>All Articles | Living Words</title>
+<meta name="description" content="All articles from Living Words — short reflections on faith, simplicity, and following Jesus in everyday life.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    background: #faf8f4;
+    color: #1a1a18;
+    font-family: 'Source Serif 4', Georgia, serif;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* ── Site Header ── */
+  .site-header {
+    background-color: #1a1209;
+    border-bottom: 3px solid #b5975a;
+    padding: 0 2rem;
+  }
+
+  .site-header-inner {
+    max-width: 860px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 64px;
+  }
+
+  a.site-logo,
+  a.site-logo:link,
+  a.site-logo:visited {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #e8d9b8 !important;
+    text-decoration: none;
+    letter-spacing: 0.01em;
+  }
+
+  a.site-logo span {
+    color: #b5975a !important;
+  }
+
+  .site-nav {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+  }
+
+  .site-nav a {
+    font-family: 'Source Serif 4', serif;
+    font-size: 0.88rem;
+    font-weight: 400;
+    color: #c8b896;
+    text-decoration: none;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    transition: color 0.2s;
+  }
+
+  .site-nav a:hover,
+  .site-nav a.active {
+    color: #e8d9b8;
+  }
+
+  /* ── Page Header ── */
+  .page-header {
+    border-bottom: 2px solid #b5975a;
+    padding: 3rem 0 1.75rem;
+    margin-bottom: 3rem;
+  }
+
+  .page-header h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(1.8rem, 4vw, 2.4rem);
+    font-weight: 700;
+    color: #1a1209;
+    line-height: 1.2;
+    margin-bottom: 0.5rem;
+  }
+
+  .page-header p {
+    font-size: 0.95rem;
+    color: #7a6040;
+    font-style: italic;
+  }
+
+  /* ── Layout ── */
+  .container {
+    max-width: 860px;
+    margin: 0 auto;
+    padding: 0 1.5rem 5rem;
+  }
+
+  /* ── Category Section ── */
+  .category-section {
+    margin-bottom: 3.5rem;
+  }
+
+  .category-label {
+    font-family: 'Source Serif 4', Georgia, serif;
+    font-size: 0.72rem;
+    font-weight: 600;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: #b5975a;
+    padding-bottom: 0.6rem;
+    border-bottom: 1px solid #e0ddd7;
+    margin-bottom: 0;
+    display: block;
+  }
+
+  /* ── Article Row ── */
+  .article-row {
+    display: flex;
+    align-items: baseline;
+    gap: 1.25rem;
+    padding: 1.1rem 0;
+    border-bottom: 1px solid #f0ece4;
+    text-decoration: none;
+    color: inherit;
+    transition: background 0.15s;
+  }
+
+  .article-row:last-child {
+    border-bottom: none;
+  }
+
+  .article-row:hover .row-title {
+    color: #b5975a;
+  }
+
+  .row-title {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: 1.08rem;
+    font-weight: 600;
+    color: #1a1209;
+    line-height: 1.3;
+    transition: color 0.15s;
+    flex: 1;
+  }
+
+  .row-desc {
+    font-size: 0.88rem;
+    color: #888780;
+    font-style: italic;
+    line-height: 1.5;
+    flex: 2;
+  }
+
+  .row-series {
+    font-size: 0.72rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: #b5975a;
+    white-space: nowrap;
+    flex-shrink: 0;
+  }
+
+  /* ── Footer ── */
+  footer {
+    border-top: 1px solid #e0ddd7;
+    padding: 1.5rem;
+    text-align: center;
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    color: #b4b2a9;
+    letter-spacing: .04em;
+  }
+
+  footer a { color: #b5975a; text-decoration: none; }
+
+  @media (max-width: 600px) {
+    .article-row { flex-direction: column; gap: 0.35rem; }
+    .row-desc { display: none; }
+    .site-header-inner { height: auto; padding: 1rem 0; flex-direction: column; gap: 0.75rem; }
+    .site-nav { gap: 1.25rem; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="/index.html">Living <span>Words</span></a>
+    <nav>
+      <ul class="site-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/articles.html" class="active">Articles</a></li>
+        <li><a href="/about.html">About</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="container">
+
+  <div class="page-header">
+    <h1>All Articles</h1>
+    <p>Reflections on faith, simplicity, and following Jesus — organized by topic.</p>
+  </div>
+
+
+  <!-- ── Church Life & Discipline ── -->
+  <div class="category-section">
+    <span class="category-label">Church Life &amp; Discipline</span>
+
+    <a class="article-row" href="/posts/the-lost-art-of-discipleship-part-2.html">
+      <span class="row-series">Part 2</span>
+      <span class="row-title">The Lost Art of Discipleship — The Courage to Hear</span>
+      <span class="row-desc">Restoration requires more than someone willing to speak. It requires someone willing to listen — and a church willing to be family.</span>
+    </a>
+
+    <a class="article-row" href="/posts/the-lost-art-of-discipleship-part-1.html">
+      <span class="row-series">Part 1</span>
+      <span class="row-title">The Lost Art of Discipleship — The Courage to Correct</span>
+      <span class="row-desc">We are in danger of losing the church that dares to disciple, to discipline, and to restore.</span>
+    </a>
+  </div>
+
+
+  <!-- ── Faith & Discipleship ── -->
+  <div class="category-section">
+    <span class="category-label">Faith &amp; Discipleship</span>
+
+    <a class="article-row" href="/posts/two-kinds-of-fear.html">
+      <span class="row-title">Have We Feared Fear — and Lost the Fear That Matters?</span>
+      <span class="row-desc">The Bible doesn't call us to fearlessness. It calls us to the right fear — and getting this wrong has real consequences.</span>
+    </a>
+  </div>
+
+
+  <!-- ── Scripture & Spirit ── -->
+  <div class="category-section">
+    <span class="category-label">Scripture &amp; Spirit</span>
+
+    <a class="article-row" href="/posts/jesus-the-living-word.html">
+      <span class="row-title">The Living Word: Beyond the Book and Beyond the Feeling</span>
+      <span class="row-desc">The Spirit and the Scriptures are not two competing authorities — they are one voice, pointing to one Person.</span>
+    </a>
+  </div>
+
+
+  <!-- ── Faith & Culture ── -->
+  <div class="category-section">
+    <span class="category-label">Faith &amp; Culture</span>
+
+    <a class="article-row" href="/posts/jesus-vs-therapeutic-culture.html">
+      <span class="row-title">The Bible vs. the Therapeutic Self</span>
+      <span class="row-desc">What happens when psychology replaces Scripture as the primary lens for understanding human beings.</span>
+    </a>
+
+    <a class="article-row" href="/posts/two-kinds-of-shame.html">
+      <span class="row-title">Two Kinds of Shame: Holy Modesty vs. Toxic Shame</span>
+      <span class="row-desc">The ancient wisdom of Sirach guides us through one of today's most pressing spiritual battles.</span>
+    </a>
+  </div>
+
+</div>
+
+<footer>
+  &copy; <script>document.write(new Date().getFullYear())</script> <a href="/index.html">Living Words</a>
+</footer>
+
+</body>
+</html>
