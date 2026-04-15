@@ -96,50 +96,41 @@
       color: #e8d9b8;
     }
 
-    /* ─── ARTICLE HERO ─────────────────────────────── */
-    .article-hero {
-      background-color: var(--brown);
-      border-bottom: 1px solid rgba(181,151,90,0.3);
-      padding: 56px 24px 52px;
-      text-align: center;
+    /* ─── ARTICLE HEADER ───────────────────────────── */
+    .article-header {
+      border-bottom: 2px solid #b5975a;
+      padding-bottom: 2rem;
+      margin-bottom: 2.75rem;
     }
 
-    .article-hero .category {
-      display: inline-block;
-      font-size: 0.75rem;
-      font-weight: 400;
+    .article-label {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.78rem;
+      font-weight: 600;
       letter-spacing: 0.12em;
       text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 20px;
+      color: #b5975a;
+      margin-bottom: 0.85rem;
+      display: block;
     }
 
-    .article-hero h1 {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: clamp(1.9rem, 4.5vw, 2.9rem);
-      font-weight: 600;
-      color: var(--cream);
+    .article-header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: clamp(1.9rem, 4vw, 2.6rem);
+      font-weight: 700;
+      color: #1a1209;
       line-height: 1.2;
-      max-width: 640px;
-      margin: 0 auto 16px;
-    }
-
-    .article-hero .subtitle {
-      font-size: 1.1rem;
-      font-style: italic;
-      color: var(--gold-light);
-      font-weight: 400;
-      max-width: 480px;
-      margin: 0 auto 28px;
-      line-height: 1.45;
+      margin-bottom: 1rem;
+      letter-spacing: -0.01em;
     }
 
     .article-meta {
-      font-size: 0.8rem;
-      letter-spacing: 0.06em;
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
       text-transform: uppercase;
-      color: var(--gold);
-      opacity: 0.75;
+      color: #b5975a;
+      margin-top: 1rem;
+      display: block;
     }
 
     /* ─── ARTICLE BODY ──────────────────────────────── */
@@ -324,28 +315,8 @@
 
 
 <!-- ═══════════════════════════════════════
-     ARTICLE HERO
+     ARTICLE HEADER (inside page wrapper below)
 ════════════════════════════════════════ -->
-<div class="article-hero">
-  <span class="category">Church Life &amp; Discipline</span>
-  <h1>The Lost Art of Discipleship</h1>
-
-  <!-- Series nav -->
-  <div style="margin: 22px auto 24px; max-width: 480px; border-top: 1px solid rgba(181,151,90,0.35); border-bottom: 1px solid rgba(181,151,90,0.35); padding: 16px 0;">
-    <div style="display: flex; flex-direction: column; gap: 10px;">
-      <div style="display: flex; align-items: baseline; gap: 12px;">
-        <a href="the-church-that-dares-to-restore.html" style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); opacity: 0.6; text-decoration: none; white-space: nowrap;">Part 1 ›</a>
-        <a href="the-church-that-dares-to-restore.html" style="font-size: 1rem; color: #a89880; font-weight: 400; text-decoration: none; font-style: italic; transition: color 0.2s;">The Courage to Correct</a>
-      </div>
-      <div style="display: flex; align-items: baseline; gap: 12px;">
-        <span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; white-space: nowrap;">Part 2 ›</span>
-        <span style="font-size: 1rem; color: var(--cream); font-weight: 600;">The Courage to Hear</span>
-      </div>
-    </div>
-  </div>
-
-  <p class="article-meta">April 2026</p>
-</div>
 
 
 <!-- ═══════════════════════════════════════
@@ -353,6 +324,22 @@
 ════════════════════════════════════════ -->
 <main class="article-wrap">
   <article class="article-body">
+
+    <div class="article-header">
+      <span class="article-label">Church Life &amp; Discipline</span>
+      <h1>The Lost Art of Discipleship</h1>
+      <div style="margin: 18px 0 0; border-top: 1px solid rgba(181,151,90,0.35); border-bottom: 1px solid rgba(181,151,90,0.35); padding: 14px 0; display: flex; flex-direction: column; gap: 9px;">
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <a href="the-lost-art-of-discipleship-part-1.html" style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #b5975a; opacity: 0.6; text-decoration: none; white-space: nowrap;">Part 1 ›</a>
+          <a href="the-lost-art-of-discipleship-part-1.html" style="font-size: 0.98rem; color: #7a6040; font-weight: 400; text-decoration: none; font-style: italic;">The Courage to Correct</a>
+        </div>
+        <div style="display: flex; align-items: baseline; gap: 12px;">
+          <span style="font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase; color: #b5975a; font-weight: 600; white-space: nowrap;">Part 2 ›</span>
+          <span style="font-size: 0.98rem; color: #1a1209; font-weight: 600;">The Courage to Hear</span>
+        </div>
+      </div>
+      <span class="article-meta">April 2026</span>
+    </div>
 
     <p>In Part 1 we talked about the church that has lost the courage to correct — the community that, in its well-meaning reaction against condemnation, has quietly abandoned the biblical call to restore. But there is another side to this loss that is just as serious and far less often named. It is not just that we have stopped going to our brothers. It is that when someone comes to us, we no longer know how to receive them.</p>
 
@@ -383,6 +370,21 @@
 
     <p>The difference between genuine discernment and defended pride is not always obvious from the outside. But it tends to be uncomfortably clear from the inside — if we are willing to look.</p>
 
+
+    <h2>Being Hurt Is Human. Giving Hurt Is Too.</h2>
+
+    <p>Here is something the current conversation about correction almost never says: people who come to us with hard words are also made of feelings. They are often nervous. They have likely rehearsed what they want to say. They may not get the words exactly right. They may be carrying their own hurt from the same situation, which colors how they say what they say. They are trying — imperfectly, humanly — to do something the New Testament calls them to do.</p>
+
+    <p>And sometimes, in the very act of trying to restore, they wound us. Not because they meant to. But because hard conversations are hard, and people are clumsy, and words do not always land the way they were intended.</p>
+
+    <p>This is where something important has gone wrong in how we approach correction in the church. We have developed a kind of emotional hair-trigger — a reflex that immediately interprets any discomfort as injury, any honest word as an attack, any imperfect delivery as evidence of bad motives. And then the blame begins. <em>You hurt me.</em> <em>You came at me wrong.</em> <em>You should have known better.</em> And the person who came in love goes home feeling like they committed an offense.</p>
+
+    <p>To be hurt is human. We are emotional beings, and hard words touch tender places. There is nothing shameful about that. But to assign blame for every hurt — to treat every unintended wound as a grievance that must be addressed before we can deal with the original issue — is to make genuine community impossible. It protects our feelings at the cost of our relationships. And in the end, it isolates us, because no one will risk the conversation if they know it will always turn against them.</p>
+
+    <p>Ephesians 4:2 calls us to bear with one another in love. That bearing includes bearing with the imperfect attempts of people who love us enough to try. It includes giving grace for the word that came out a little harder than intended. It includes asking: <em>what were they trying to say?</em> — not just: <em>how did it make me feel?</em></p>
+
+    <p>Our emotions are real. They are God-given. But they are not always reliable guides to what actually happened, what was actually meant, or what response is actually called for. The examined heart — the heart that takes both the message and its own reactions before God — is the heart that can receive a clumsy but faithful word and find the truth in it, even through the imperfect packaging.</p>
+
     <h2>What It Actually Means to Hear</h2>
 
     <p>The word Jesus uses in Matthew 18 for the successful outcome of correction is telling: <em>you have gained your brother.</em> Gained — as if something of real value was at stake, something that could have been lost. The correction worked not just because someone spoke truth carefully, but because someone heard it honestly.</p>
@@ -411,19 +413,25 @@
 
     <p>Psalm 139 ends with one of the most courageous prayers in Scripture: <em>"Search me, O God, and know my heart. Try me and know my thoughts. And see if there be any grievous way in me, and lead me in the way everlasting."</em> This is the examined heart on full display — not defensive, not self-justifying, but genuinely open to being known and corrected by God. And God, more often than we realize, does that searching through the faithful words of people who love us.</p>
 
-    <h2>The Community That Dares to Hear</h2>
+    <h2>The Church That Chooses Family</h2>
 
     <p>The early church was a community of proximity. People knew each other — not just their names and preferences but their struggles, their patterns, their slow drifts. That proximity made both kinds of restoration possible: the correction that goes out and the hearing that receives it. You cannot meaningfully speak truth into someone's life from a distance. And you cannot genuinely hear someone who barely knows you.</p>
 
-    <p>We have traded proximity for comfort. The modern church is often a collection of individuals who worship in the same space but do not live inside each other's lives. In that environment, neither correction nor hearing is really possible — because neither requires anything of us. We attend. We leave. Nobody sees the whole.</p>
+    <p>We have traded that proximity for comfort. The modern church is often a collection of individuals who worship in the same space but do not live inside each other's lives. In that environment, neither correction nor hearing is really possible — because neither requires anything of us. We attend. We leave. Nobody sees the whole. And nobody is ever close enough to say the hard thing, or humble enough to receive it.</p>
 
-    <p>To recover the lost art of restoration is to recover closeness. The willingness to be seen and to see. To speak and to listen. To go when you know your brother has something against you, even when the conversation is costly. To let a hard word sit in your conscience long enough to ask whether it is true.</p>
+    <p>But there is another way. And it begins with a single choice — the choice to treat one another as family.</p>
 
-    <p>Part 1 of this series asked whether the church still has the courage to correct. Part 2 asks something equally searching: does the church still have the courage to hear?</p>
+    <p>In a family, people hurt each other. They also forgive each other. They give the benefit of the doubt. They assume the best about intentions even when the words came out wrong. They stay in the room when the conversation gets difficult. They come back to the table after they have cooled down. They do not keep a record of every imperfect thing that was said. They hold the relationship as more important than being right, and more important than being comfortable.</p>
 
-    <p>Because a community where people will speak but no one will listen is not restoration. It is noise. And a community where people will listen but no one will speak is not love. It is polite abandonment.</p>
+    <p>When the church makes that choice — consciously, deliberately, as a community — something begins to shift. Correction becomes possible because it comes from people who have proven they are not going anywhere. Hearing becomes possible because the relationship is strong enough to hold the weight of honesty. Hard conversations stop feeling like attacks and start feeling like what they actually are: the costly, faithful, love-driven work of people who belong to each other.</p>
 
-    <p>The lost art of restoration requires both. The courage to correct, and the courage to hear. Both are hard. Both are costly. And both are exactly what Christ called us to.</p>
+    <p>This is not a program. It cannot be manufactured by a new small group curriculum or a weekend retreat. It grows from the soil of genuine shared life — from eating together, praying together, carrying each other's burdens in the ordinary days between Sundays. It is the ancient pattern the church has always known at its best, and largely forgotten in its comfort.</p>
+
+    <p>The recovery of discipleship — real discipleship, the kind that forms people and holds them and restores them when they fall — will not come from better preaching alone, or better theology alone, or better correction alone. It will come when the church decides to be a family again. To be close enough to see. Humble enough to hear. Brave enough to speak. And committed enough to stay.</p>
+
+    <p>Part 1 asked whether the church still has the courage to correct. Part 2 asks whether it still has the courage to hear. But underneath both questions is the deeper one: does the church still have the courage to belong to one another?</p>
+
+    <p>Because that is where everything else begins.</p>
 
     <blockquote>
       <p>Whoever gives heed to instruction prospers, and blessed is the one who trusts in the Lord.</p>
@@ -435,7 +443,7 @@
     <div class="series-nav">
       <p class="series-label">Read the Series</p>
       <p><strong>Part 1: The Courage to Correct</strong> — The church has lost the courage to restore. Not because correction is too hard, but because we have confused condemnation with accountability.</p>
-      <a href="the-church-that-dares-to-restore.html">&larr; Read Part 1</a>
+      <a href="the-lost-art-of-discipleship-part-1.html">&larr; Read Part 1</a>
     </div>
 
   </article>
