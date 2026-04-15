@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>The Lost Art of Restoration, Part 2: The Courage to Hear | Living Words</title>
+  <title>The Lost Art of Discipleship, Part 2: The Courage to Hear | Living Words</title>
   <meta name="description" content="Restoration requires more than someone willing to speak. It requires someone willing to listen. A reflection on Matthew 5, the examined heart, and what it really means to hear your brother." />
 
   <!-- Google tag (gtag.js) -->
@@ -17,7 +17,7 @@
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300;0,8..60,400;0,8..60,600;1,8..60,300;1,8..60,400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400;1,600&family=Source+Serif+4:ital,wght@0,300;0,400;0,600;1,300;1,400&display=swap" rel="stylesheet">
 
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -47,49 +47,54 @@
     }
 
     /* ─── HEADER ───────────────────────────────────── */
-    header {
-      background-color: var(--brown);
-      border-bottom: 3px solid var(--gold);
+    .site-header {
+      background-color: #1a1209;
+      border-bottom: 3px solid #b5975a;
+      padding: 0 2rem;
     }
 
-    .header-inner {
+    .site-header-inner {
       max-width: 860px;
       margin: 0 auto;
-      padding: 0 24px;
       display: flex;
       align-items: center;
       justify-content: space-between;
       height: 64px;
     }
 
-    .site-title {
-      font-family: 'Source Serif 4', Georgia, serif;
-      font-size: 1.25rem;
-      font-weight: 600;
-      color: var(--cream);
+    .site-logo {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.35rem;
+      font-weight: 700;
+      color: #e8d9b8;
       text-decoration: none;
-      letter-spacing: 0.02em;
+      letter-spacing: 0.01em;
     }
 
-    .site-title span { color: var(--gold-light); }
+    .site-logo span {
+      color: #b5975a;
+    }
 
-    nav ul {
-      list-style: none;
+    .site-nav {
       display: flex;
-      gap: 28px;
+      gap: 2rem;
+      list-style: none;
     }
 
-    nav a {
-      color: #d4c9b8;
-      text-decoration: none;
-      font-size: 0.9rem;
+    .site-nav a {
+      font-family: 'Source Serif 4', serif;
+      font-size: 0.88rem;
       font-weight: 400;
-      letter-spacing: 0.04em;
+      color: #c8b896;
+      text-decoration: none;
+      letter-spacing: 0.06em;
       text-transform: uppercase;
       transition: color 0.2s;
     }
 
-    nav a:hover { color: var(--gold-light); }
+    .site-nav a:hover {
+      color: #e8d9b8;
+    }
 
     /* ─── ARTICLE HERO ─────────────────────────────── */
     .article-hero {
@@ -304,13 +309,14 @@
 <!-- ═══════════════════════════════════════
      HEADER
 ════════════════════════════════════════ -->
-<header>
-  <div class="header-inner">
-    <a href="../index.html" class="site-title">Living <span>Words</span></a>
+<header class="site-header">
+  <div class="site-header-inner">
+    <a class="site-logo" href="/index.html">Living <span>Words</span></a>
     <nav>
-      <ul>
-        <li><a href="../index.html">Home</a></li>
-        <li><a href="../about.html">About</a></li>
+      <ul class="site-nav">
+        <li><a href="/index.html">Home</a></li>
+        <li><a href="/posts/">Articles</a></li>
+        <li><a href="/about.html">About</a></li>
       </ul>
     </nav>
   </div>
@@ -322,7 +328,7 @@
 ════════════════════════════════════════ -->
 <div class="article-hero">
   <span class="category">Church Life &amp; Discipline</span>
-  <h1>The Lost Art of Restoration</h1>
+  <h1>The Lost Art of Discipleship</h1>
 
   <!-- Series nav -->
   <div style="margin: 22px auto 24px; max-width: 480px; border-top: 1px solid rgba(181,151,90,0.35); border-bottom: 1px solid rgba(181,151,90,0.35); padding: 16px 0;">
