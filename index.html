@@ -77,59 +77,6 @@
     padding: 3rem 1.5rem 5rem;
   }
 
-  /* ── Hero ── */
-  .hero {
-    background: #ffffff;
-    border: 1px solid #e0ddd7;
-    border-radius: 6px;
-    padding: 2.5rem 2.75rem;
-    margin-bottom: 3rem;
-  }
-
-  .hero .label {
-    font-family: Georgia, serif;
-    font-size: 10.5px;
-    letter-spacing: .12em;
-    text-transform: uppercase;
-    color: #888780;
-    margin-bottom: .85rem;
-  }
-
-  .hero h2 {
-    font-family: 'Playfair Display', Georgia, serif;
-    font-size: clamp(1.6rem, 3.5vw, 2.2rem);
-    font-weight: 600;
-    line-height: 1.2;
-    margin-bottom: .85rem;
-    color: #1a1a18;
-  }
-
-  .hero p {
-    font-size: 1.05rem;
-    line-height: 1.8;
-    color: #555550;
-    margin-bottom: 1.5rem;
-    font-style: italic;
-    max-width: 600px;
-  }
-
-  .hero a.read-link {
-    display: inline-block;
-    font-family: Georgia, serif;
-    font-size: .78rem;
-    letter-spacing: .1em;
-    text-transform: uppercase;
-    color: #1a1a18;
-    text-decoration: none;
-    border-bottom: 1px solid #1a1a18;
-    padding-bottom: 2px;
-  }
-
-  .hero a.read-link:hover {
-    color: #5f5e5a;
-    border-bottom-color: #5f5e5a;
-  }
-
   /* ── Section heading ── */
   .section-heading {
     font-family: Georgia, serif;
@@ -142,16 +89,72 @@
     border-bottom: 1px solid #e0ddd7;
   }
 
-  /* ── Article grid ── */
+  /* ── Featured card (newest, full width) ── */
+  .featured-card {
+    background: #ffffff;
+    border: 1px solid #e0ddd7;
+    border-radius: 6px;
+    padding: 2.25rem 2.5rem;
+    text-decoration: none;
+    color: inherit;
+    display: block;
+    margin-bottom: 1px;
+    transition: background .15s;
+  }
+
+  .featured-card:hover {
+    background: #faf9f7;
+  }
+
+  .featured-card .card-label {
+    font-family: Georgia, serif;
+    font-size: 10px;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #888780;
+    margin-bottom: .75rem;
+    display: block;
+  }
+
+  .featured-card h2 {
+    font-family: 'Playfair Display', Georgia, serif;
+    font-size: clamp(1.5rem, 3vw, 2rem);
+    font-weight: 600;
+    line-height: 1.25;
+    color: #1a1a18;
+    margin-bottom: .75rem;
+  }
+
+  .featured-card p {
+    font-size: 1rem;
+    line-height: 1.75;
+    color: #555550;
+    font-style: italic;
+    max-width: 620px;
+    margin-bottom: 1.25rem;
+  }
+
+  .featured-card .read-link {
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+    color: #1a1a18;
+    border-bottom: 1px solid #1a1a18;
+    padding-bottom: 2px;
+  }
+
+  /* ── Article grid (remaining 3) ── */
   .article-grid {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
     gap: 1px;
     background: #e0ddd7;
     border: 1px solid #e0ddd7;
-    border-radius: 6px;
+    border-top: none;
+    border-radius: 0 0 6px 6px;
     overflow: hidden;
-    margin-bottom: 3rem;
+    margin-bottom: 2.25rem;
   }
 
   .article-card {
@@ -174,22 +177,49 @@
     text-transform: uppercase;
     color: #888780;
     margin-bottom: .6rem;
+    display: block;
   }
 
   .article-card h3 {
     font-family: 'Playfair Display', Georgia, serif;
-    font-size: 1.15rem;
+    font-size: 1.1rem;
     font-weight: 600;
     line-height: 1.3;
-    margin-bottom: .55rem;
+    margin-bottom: .5rem;
     color: #1a1a18;
   }
 
   .article-card p {
-    font-size: .9rem;
+    font-size: .88rem;
     line-height: 1.65;
     color: #888780;
     font-style: italic;
+  }
+
+  /* ── See All button ── */
+  .see-all-wrap {
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+
+  .see-all-btn {
+    display: inline-block;
+    font-family: Georgia, serif;
+    font-size: .78rem;
+    letter-spacing: .12em;
+    text-transform: uppercase;
+    color: #5f5e5a;
+    text-decoration: none;
+    border: 1px solid #c8c5be;
+    border-radius: 3px;
+    padding: .65rem 1.75rem;
+    transition: color .15s, border-color .15s, background .15s;
+  }
+
+  .see-all-btn:hover {
+    color: #1a1a18;
+    border-color: #1a1a18;
+    background: #ffffff;
   }
 
   /* ── About strip ── */
@@ -232,7 +262,7 @@
   }
 
   @media (max-width: 500px) {
-    .hero { padding: 1.75rem 1.35rem; }
+    .featured-card { padding: 1.75rem 1.35rem; }
     .about-strip { flex-direction: column; gap: .75rem; }
   }
 </style>
@@ -251,74 +281,45 @@
 
 <div class="container">
 
-  <!-- Featured Article -->
-  <div class="hero">
-    <p class="label">Featured Article &mdash; Church Life &amp; Discipline</p>
-<h2>The Lost Art of Discipleship — Part 2: The Courage to Hear</h2>
-<p>Restoration requires more than someone willing to speak. It requires someone willing to listen — and a church willing to be family.</p>
-<a class="read-link" href="/posts/the-lost-art-of-discipleship-part-2.html">Read the article &rarr;</a>
-  </div>
+  <p class="section-heading">Recent Articles</p>
 
-  <!-- All Articles -->
-  <p class="section-heading">All Articles</p>
+  <!-- ── Featured: Newest Article ── -->
+  <a class="featured-card" href="/posts/wresting-the-scriptures.html">
+    <span class="card-label">Scripture &amp; Discernment &mdash; Latest</span>
+    <h2>Not Everyone Who Quotes Scripture Is Scriptural</h2>
+    <p>The Devil quoted the Bible word for word — and he was wrong. What does it mean to wrest the scriptures, and how do we receive God's Word with readiness of mind?</p>
+    <span class="read-link">Read the article &rarr;</span>
+  </a>
 
+  <!-- ── Grid: Next 3 Most Recent ── -->
   <div class="article-grid">
 
-<a class="article-card" href="/posts/the-lost-art-of-discipleship-part-2.html">
-  <p class="card-label">Church Life &amp; Discipline</p>
-  <h3>The Lost Art of Discipleship — Part 2: The Courage to Hear</h3>
-  <p>Restoration requires more than someone willing to speak. It requires someone willing to listen — and a church willing to be family.</p>
-</a>
+    <a class="article-card" href="/posts/the-lost-art-of-discipleship-part-2.html">
+      <span class="card-label">Church Life &amp; Discipline</span>
+      <h3>The Lost Art of Discipleship — Part 2: The Courage to Hear</h3>
+      <p>Restoration requires more than someone willing to speak. It requires someone willing to listen — and a church willing to be family.</p>
+    </a>
 
-<a class="article-card" href="/posts/the-lost-art-of-discipleship-part-1.html">
-  <p class="card-label">Church Life &amp; Discipline</p>
-  <h3>The Lost Art of Discipleship — Part 1: The Courage to Correct</h3>
-  <p>We are in danger of losing the church that dares to disciple, to discipline, and to restore.</p>
-</a>	
+    <a class="article-card" href="/posts/the-lost-art-of-discipleship-part-1.html">
+      <span class="card-label">Church Life &amp; Discipline</span>
+      <h3>The Lost Art of Discipleship — Part 1: The Courage to Correct</h3>
+      <p>We are in danger of losing the church that dares to disciple, to discipline, and to restore.</p>
+    </a>
 
     <a class="article-card" href="/posts/two-kinds-of-fear.html">
-      <p class="card-label">Faith &amp; Discipleship</p>
+      <span class="card-label">Faith &amp; Discipleship</span>
       <h3>Have We Feared Fear — and Lost the Fear That Matters?</h3>
       <p>The Bible doesn't call us to fearlessness. It calls us to the right fear — and getting this wrong has real consequences.</p>
     </a>
 
-    <a class="article-card" href="/posts/jesus-the-living-word.html">
-      <p class="card-label">Scripture &amp; Spirit</p>
-      <h3>The Living Word: Beyond the Book and Beyond the Feeling</h3>
-      <p>The Spirit and the Scriptures are not two competing authorities — they are one voice, pointing to one Person.</p>
-    </a>
-
-    <a class="article-card" href="/posts/jesus-vs-therapeutic-culture.html">
-      <p class="card-label">Faith &amp; Culture</p>
-      <h3>The Bible vs. the Therapeutic Self</h3>
-      <p>What happens when psychology replaces Scripture as the primary lens for understanding human beings.</p>
-    </a>
-
-    <a class="article-card" href="/posts/two-kinds-of-shame.html">
-      <p class="card-label">Faith &amp; Culture</p>
-      <h3>Two Kinds of Shame: Holy Modesty vs. Toxic Shame</h3>
-      <p>The ancient wisdom of Sirach guides us through one of today's most pressing spiritual battles.</p>
-    </a>
-
-        <a class="article-card" href="/posts/wresting-the-scriptures.html">
-      <p class="card-label">Scripture &amp; Discernment</p>
-      <h3>Not Everyone Who Quotes Scripture Is Scriptural</h3>
-      <p>The Devil quoted the Bible word for word � and he was wrong. What does it mean to wrest the scriptures?</p>
-    </a>
-
-    <!-- Add new article cards here following the same pattern:
-
-    <a class="article-card" href="/posts/your-article-filename.html">
-      <p class="card-label">Category</p>
-      <h3>Article Title</h3>
-      <p>Brief description of the article.</p>
-    </a>
-
-    -->
-
   </div>
 
-  <!-- About -->
+  <!-- ── See All ── -->
+  <div class="see-all-wrap">
+    <a class="see-all-btn" href="/articles.html">See all articles &rarr;</a>
+  </div>
+
+  <!-- ── About ── -->
   <div class="about-strip" id="about">
     <div class="icon">&#9997;</div>
     <p><strong>Living Words</strong> is a collection of articles on Scripture, theology, and the challenges facing the church in modern culture. Written from a Christ-centered, plain-spoken perspective — for those who want to think carefully about what the Bible actually says and what that demands of us today. <em>"Prayerfully read, listen and search the scriptures to see whether these things are so."</em></p>
